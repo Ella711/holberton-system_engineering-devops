@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -R -empty -printf
+find . -empty | ls -Cal
