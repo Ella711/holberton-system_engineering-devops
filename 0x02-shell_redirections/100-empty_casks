@@ -1,2 +1,2 @@
-#!/bin/bash
-find . -empty -print
+b#!/bin/bash
+find . -type d,f -mindepth 0 -empty -print
