@@ -4,19 +4,9 @@
 #	- in a list format
 # 	- only the part of the name after the first dash is displayed
 
-for file in *;
+files="$(ls)"
+for file in $files;
 do
-	echo "${file:2}"
+	echo "$file" | cut -d "-" -f2
 done
-
-
-# for file in *;
-# do
-# 	for num in {0..9}
-# 	do
-# 		if [ "${file:0:1}" == "$num" ]; then
-# 			echo "${file:2}"
-# 		fi
-# 	done
-# done
 
