@@ -8,3 +8,4 @@ package { 'puppet-lint':
   provider => gem,
   source   => 'http://rubygems.org',
 }
+
