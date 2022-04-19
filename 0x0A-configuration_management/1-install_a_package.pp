@@ -1,4 +1,7 @@
-# install puppet-lint
+# Using Puppet, install puppet-lint.
+# Requirements:
+  # Install puppet-lint
+  # Version must be 2.5.0
 
 package { 'puppet-lint':
   ensure   => '2.5.0',
