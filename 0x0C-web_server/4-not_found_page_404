@@ -5,7 +5,8 @@ sudo apt-get -y update
 sudo apt-get install -y --allow-downgrades nginx
 sudo ufw allow 'Nginx HTTP'
 echo "Hello World!" | sudo tee -a /var/www/html/index.html
-#put in line 47 of default page
-sudo sed -i "47i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+#put in line 45 of default page
+sudo sed -i "45i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo sed -i "46i error_page 404 /custom_404.html;" /etc/nginx/sites-available/default
 sudo service nginx restart
