@@ -6,5 +6,5 @@ sudo apt-get install -y --allow-downgrades nginx
 sudo ufw allow 'Nginx HTTP'
 echo "Hello World!" | sudo tee -a /var/www/html/index.html
 #put in line 46 of default page
-sed -i "46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+sudo sed -i "46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
 sudo service nginx restart
