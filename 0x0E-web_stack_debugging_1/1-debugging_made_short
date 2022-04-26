@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that fixes bug of nginx status not running and not listening on port 80
+# As short as possible
+# Solution: https://stackoverflow.com/questions/16021481/nginx-not-listening-to-port-80
+
+sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
+sudo service nginx restart
