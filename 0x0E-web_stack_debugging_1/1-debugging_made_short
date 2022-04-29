@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # As short as possible
-sudo service nginx stop
 sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
-
+pkill -HUP nginx
