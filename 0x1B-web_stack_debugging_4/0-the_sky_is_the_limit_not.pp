@@ -9,3 +9,4 @@ exec { 'fix failed':
   command => "sed -i '5i worker_rlimit_nofile 30000;' /etc/nginx/nginx.conf && sudo service nginx restart",
   path    => '/bin',
 }
+
