@@ -10,13 +10,11 @@ def all_to_json():
     """
     Export the API data into json format
     """
-    global all_dict
     api_url = "https://jsonplaceholder.typicode.com"
     users = requests.get(api_url + "/users").json()
     user_list = []
     for user in users:
         user_list.append((user.get("id"), user.get("username")))
-
 
     todo = requests.get(api_url + "/todos").json()
     todo_list = []
