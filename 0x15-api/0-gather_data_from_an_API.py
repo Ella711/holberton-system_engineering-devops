@@ -20,7 +20,8 @@ def display():
         if tasks.get("completed") is True:
             completed_tasks.append(tasks.get("title"))
 
-    print("Employee {} is done with tasks({}/{}):".format(user.get("name"), len(completed_tasks), len(todo)))
+    print("Employee {} is done with tasks({}/{}):"
+          .format(user.get("name"), len(completed_tasks), len(todo)))
     for titles in completed_tasks:
         print("\t {}".format(titles))
 
